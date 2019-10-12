@@ -16,5 +16,6 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 =======
-WhatsApp clone in flutter
->>>>>>> e78cd0aaad5af1f75da7f3a40e0165dfaec6680a
+WhatsApp clone using flutter
+
+![Image of chat](https://github.com/Rafaty/whatsapp_flutter/blob/master/screenshots/sc1.png)
