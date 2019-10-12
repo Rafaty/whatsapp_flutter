@@ -25,6 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   badges: ^1.1.0
   font_awesome_flutter: ^8.5.0
+  camera: ^0.5.5+1
 
 dev_dependencies:
   flutter_test:

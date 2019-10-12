@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:whatsapp_flutter/data/ChatModel.dart';
 
-int noReadTotal =0;
 
 class ChatBox extends StatefulWidget {
   @override
@@ -12,28 +11,13 @@ class ChatBox extends StatefulWidget {
 
 class _ChatBoxState extends State<ChatBox> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-
-  }
-  @override
   Widget build(BuildContext context) {
-
-    void _incrementChatNoread(){
-      setState(() {
-        noReadTotal++;
-      });
-    }
-
 
     return ListView.builder(
       itemCount: chats.length,
 
         itemBuilder: (context, index){
          final chat = chats[index];
-
-
 
          return InkWell(
            onTap: (){},
@@ -51,7 +35,7 @@ class _ChatBoxState extends State<ChatBox> {
                            borderRadius: BorderRadius.circular(55.0),
                            image: DecorationImage(
                              image: NetworkImage(
-                                 'https://avatars0.githubusercontent.com/u/7800240?s=460&v=4'),
+                                chat.image),
                              fit: BoxFit.cover,
                            ),
                          ),
@@ -96,7 +80,7 @@ class _ChatBoxState extends State<ChatBox> {
                                style:  TextStyle(color: Colors.grey, fontSize: 15.0),
                              ),
                              Padding(
-                               padding: const EdgeInsets.only(top:12.0),
+                               padding: const EdgeInsets.only(top:13.0),
                                child: Divider(height: 2.00,),
                              )
                            ],

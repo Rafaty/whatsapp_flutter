@@ -1,10 +1,16 @@
 
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp_flutter/screens/callsScreen.dart';
+import 'package:whatsapp_flutter/screens/cameraScreen.dart';
 import 'package:whatsapp_flutter/screens/chatScreen.dart';
+import 'package:whatsapp_flutter/screens/statusScreen.dart';
 
 import 'package:whatsapp_flutter/widgets/itemTab.dart';
 
 class MainScreen extends StatefulWidget {
+  final List<CameraDescription> cameras;
+  MainScreen({this.cameras});
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -14,6 +20,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
+      initialIndex: 1,
       child: Scaffold(
         appBar: AppBar(
           title: Text('WhatsApp'),
@@ -45,10 +52,10 @@ class _MainScreenState extends State<MainScreen> {
         ),
         body: TabBarView(
           children: [
-            Icon(Icons.directions_car),
+            CameraScreen(widget.cameras),
             ChatScreen(),
-            Icon(Icons.directions_transit),
-            Icon(Icons.directions_bike),
+            StatusScreen(),
+            CallsScreen(),
           ],
         ),
         floatingActionButton: FloatingActionButton(
