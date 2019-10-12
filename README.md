@@ -18,4 +18,5 @@ samples, guidance on mobile development, and a full API reference.
 =======
 WhatsApp clone using flutter
 
-![Image of chat](https://github.com/Rafaty/whatsapp_flutter/blob/master/screenshots/sc1.png)
+
+<p><img src="https://github.com/Rafaty/whatsapp_flutter/blob/master/screenshots/sc1.png" alt="test" width="400" height="700"></p>
